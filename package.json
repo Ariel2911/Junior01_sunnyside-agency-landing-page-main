@@ -1,0 +1,25 @@
+{
+  "name": "junior01_sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariel2911/Junior01_sunnyside-agency-landing-page-main.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariel2911/Junior01_sunnyside-agency-landing-page-main/issues"
+  },
+  "homepage": "https://github.com/Ariel2911/Junior01_sunnyside-agency-landing-page-main#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  }
+}
