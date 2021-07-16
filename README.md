@@ -3,7 +3,7 @@
 
 URL donde encontrar el desafío: https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef. Los desafíos de Frontend Mentor ayudan a mejorar sus habilidades de codificación mediante la construcción de proyectos realistas.
 
-## Table of contents
+## Tabla de contenidos
 
 - [Descripción general](#Descripción general)
   - [El desafío](#El desafío)
@@ -43,4 +43,5 @@ Los usuarios deben poder:
 - CSS Grid
 - Mobile-first workflow
 - Gulp
+- Javascript
 
