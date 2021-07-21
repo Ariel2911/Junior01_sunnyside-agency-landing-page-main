@@ -1,0 +1,41 @@
+.header{
+    &__arrow{    
+        position: relative;
+        top: 48px;
+        left: 50%;
+    
+        display: block;
+    
+        width: 6px;
+        height: 115px;
+        border-radius: 6px;
+    
+        background-color: $White;
+        
+        transform: translateX(-50%);
+    
+        &:before, &:after{
+            content: ('');
+    
+            position: absolute;        
+            bottom: -1px;
+            left: -9px;
+    
+            display: block;        
+            
+            border-radius: 4px;
+            width: 6px;
+            height: 26px;
+    
+            background-color: $White;
+    
+            transform: rotate(-45deg);
+        }
+    
+        &:after{
+            left: 9px;
+    
+            transform: rotate(45deg);        
+        }
+    }
+}

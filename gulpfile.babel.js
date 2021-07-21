@@ -31,9 +31,10 @@ gulp.task('views', () => {
 
 gulp.task('sass', () => {
   return gulp.src('./src/scss/styles.scss')
-  .pipe(sass({
-      outputStyle: 'compressed'
-  }))
+  // .pipe(sass({
+  //     outputStyle: 'compressed'
+  // }))
+  .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('./public/css'))
 })
 

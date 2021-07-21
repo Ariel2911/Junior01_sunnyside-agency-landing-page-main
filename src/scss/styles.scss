@@ -1,16 +1,67 @@
 @import './config';
+@import './arrow';
+
 
 
 
 
 html{
     font-size: 62.5%;
-        
-}
-body{
-    background-color: $Soft-red;
-    font-size: 1.8rem;     
+    box-sizing: border-box;
+    scroll-behavior: smooth;        
 }
 
-//font-family: 'Barlow', sans-serif;
-//font-family: 'Fraunces', serif;
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    max-width: 375px;
+
+    font-family: $font-f01;
+    font-size: $font-s;
+
+    margin: 0; 
+
+    overflow-x: hidden;            
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+.header{
+    height: 540px;
+
+    background-image: url("../images/mobile/image-header.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; 
+     
+    
+    &__logo{
+        display: inline-block;
+        margin-top: 32px;
+        margin-left: 12px;
+    }
+    
+    &__title{
+        margin-top: 84px;        
+        
+        font-family: $font-f02;
+        font-weight: 900;
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-align: center;        
+        letter-spacing: 6.5px;
+        color: $White;
+    }
+}
+
+
+
+
