@@ -26,6 +26,51 @@
   transform: rotate(45deg);
 }
 
+.btn-menu {
+  position: fixed;
+  z-index: 999;
+  top: 30px;
+  right: 24px;
+  padding: 0;
+  border: 0;
+  width: 24px;
+  height: 30px;
+  background: none;
+  cursor: pointer;
+}
+.btn-menu__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+}
+.btn-menu__bar:before, .btn-menu__bar:after {
+  position: absolute;
+  top: 7px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+.btn-menu__bar:after {
+  top: -7px;
+}
+.btn-menu__bar--active {
+  height: 0;
+}
+.btn-menu__bar--active:before, .btn-menu__bar--active:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.btn-menu__bar--active:after {
+  transform: rotate(45deg);
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -53,11 +98,67 @@ img {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .header {
   height: 540px;
   background-image: url("../images/mobile/image-header.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+.header__menu {
+  position: absolute;
+  z-index: 99;
+  top: 75px;
+  left: -305px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 305px;
+  padding: 0px 0 18px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.header__menu-link {
+  font-family: "Barlow", sans-serif;
+  font-size: 2rem;
+  color: #818498;
+}
+.header__menu-link--contact {
+  font-family: "Fraunces", serif;
+  font-size: 1.55rem;
+  font-size: 700;
+  text-transform: uppercase;
+  color: #23303e;
+  background-color: #fad400;
+  border-radius: 50px;
+  padding: 19px 26px 18px;
+}
+.header__menu::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid white;
+}
+.header__menu--active {
+  opacity: 1;
 }
 .header__logo {
   display: inline-block;

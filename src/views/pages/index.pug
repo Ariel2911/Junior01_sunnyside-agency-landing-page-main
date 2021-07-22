@@ -1,3 +1,4 @@
+include ../config/config
 doctype html
 html(lang="es")
     head
@@ -14,12 +15,26 @@ html(lang="es")
         link(rel="shortcut icon", href="./images/iconos/favicon-32x32.png", type="image/x-icon")
         title Frontend Mentor | Sunnyside agency landing page
     body        
-        header.header            
+        header.header 
+
+                     
             
             img(src="./images/logo/logo.svg", alt="logo").header__logo 
 
             h1.header__title We are creatives
                 span.header__arrow
+            button(type="button").btn-menu#btn-menu
+                span.btn-menu__bar 
+                nav 
+                    ul.header__menu  
+                        each navBar in navBars                        
+                            li
+                                a(href="#").header__menu-link= `${navBar}`
+                        li
+                            a(href="#").header__menu-link--contact Contact 
             
+
+           
+
           
         script(src="./js/scripts.js") 

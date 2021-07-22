@@ -1,6 +1,6 @@
 @import './config';
 @import './arrow';
-
+@import './btn-menu';
 
 
 
@@ -10,13 +10,11 @@ html{
     box-sizing: border-box;
     scroll-behavior: smooth;        
 }
-
 *,
 *:before,
 *:after{
     box-sizing: inherit;
 }
-
 body{
     max-width: 375px;
 
@@ -27,22 +25,89 @@ body{
 
     overflow-x: hidden;            
 }
-
 img{
     max-width: 100%;
     height: auto;
     display: block;
     border: 0;
 }
-
+a{
+    text-decoration: none;
+    // margin: 0;
+    // padding: 0;
+}
+ul{
+    padding:0;
+    margin: 0;    
+    list-style: none;
+}
 .header{
     height: 540px;
 
     background-image: url("../images/mobile/image-header.jpg");
     background-size: contain;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;     
      
+    &__menu{
+        position: absolute;
+        z-index: 99;
+        top: 75px;
+        left: -305px;
+        right: 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 305px;
+
+        padding: 0px 0 18px;        
+
+        background-color: $White;
+
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+
+        &-link{
+            font-family: $font-f01;
+            font-size: 2rem;
+            
+            color: $Dark-blue;
+
+            &--contact{
+                font-family: $font-f02;
+                font-size: 1.55rem;            
+                font-size: 700;
+                text-transform: uppercase;
+                color: $Very-dark-D-blue;
     
+                background-color: $Yellow;
+    
+                border-radius: 50px;
+                padding: 19px 26px 18px;
+            }
+        }
+        
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: -24px;
+            right: 0;
+            width: 24px;
+            height: 24px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid $White;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid $White;
+        } 
+        
+        &--active{
+            opacity: 1;
+        }
+    }
+
     &__logo{
         display: inline-block;
         margin-top: 32px;
@@ -61,7 +126,3 @@ img{
         color: $White;
     }
 }
-
-
-
-

@@ -1,0 +1,63 @@
+.btn-menu{
+    position: fixed;
+    z-index: 999;
+    top: 30px;
+    right: 24px;
+
+    padding: 0;
+    border: 0;
+
+    width: 24px;
+    height: 30px;
+
+    background:none;
+    
+    cursor: pointer;
+
+    &__bar{
+        position: relative;
+        display: block;
+        
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+
+        background-color: $White;        
+
+        &:before, &:after{
+            position: absolute;
+            top: 7px;
+            
+            content: ('');
+            display: block;
+            
+            
+            width: 100%;
+            height: 2px; 
+            border-radius: 1px;
+            
+            background-color: $White;
+
+            transition: transform 0.2s ease;
+        }
+
+        
+
+        &:after{
+            top: -7px;
+        }
+
+        &--active{
+            height: 0;
+
+            &:before, &:after{
+                top: 0;
+                transform: rotate(-45deg);
+            }
+            &:after{
+                transform: rotate(45deg);
+            }
+        }
+            
+    }
+}
