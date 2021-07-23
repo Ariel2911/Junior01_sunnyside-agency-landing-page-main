@@ -14,6 +14,7 @@ html{
 *:before,
 *:after{
     box-sizing: inherit;
+    border: 0;
 }
 body{
     max-width: 375px;
@@ -29,24 +30,25 @@ img{
     max-width: 100%;
     height: auto;
     display: block;
-    border: 0;
+      
 }
 a{
     text-decoration: none;
-    // margin: 0;
-    // padding: 0;
+    color: inherit;
 }
 ul{
     padding:0;
     margin: 0;    
     list-style: none;
 }
+
 .header{
-    height: 540px;
+    position: relative;
+    height: 536px;
 
     background-image: url("../images/mobile/image-header.jpg");
     background-size: contain;
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat;
      
     &__menu{
         position: absolute;
@@ -69,8 +71,7 @@ ul{
 
         transition: opacity 0.5s ease;
 
-        &-link{
-            font-family: $font-f01;
+        &-link{            
             font-size: 2rem;
             
             color: $Dark-blue;
@@ -125,4 +126,174 @@ ul{
         letter-spacing: 6.5px;
         color: $White;
     }
+}
+.main{
+    text-align: center;
+        
+    
+}
+.issue{
+    display: flex;
+    flex-direction: column;    
+
+    &__container{
+        margin: 38px 24px 67px;
+    }
+
+    &__title{
+        font-family: $font-f02;
+        font-weight: 900; 
+        font-size: 3.15rem;
+        margin-bottom: 24px;        
+    }
+
+    &__description{
+        line-height: 3rem;
+        margin-bottom: 32px; 
+        color: $Dark-blue;          
+    }
+
+    &__link--yellow, &__link--red{
+        position: relative;
+        font-family: $font-f02;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -9;
+            bottom: -1px;
+            left: -2px;
+            width: 126px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: $Yellow;
+        }
+    }
+
+    &__link--red:after{
+        background-color: $Soft-red;
+    }
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    color: $Very-dark-D-blue;
+
+    &__graphic-design, &__photography{
+        position: relative;
+        background-image: url("../images/mobile/image-graphic-design.jpg");
+        background-size: cover;
+        height: 596px;        
+    }
+
+    &__photography{
+        background-image: url("../images/mobile/image-photography.jpg");
+    }
+
+    &__title{
+        font-family: $font-f02;
+        font-weight: 900; 
+        font-size: 2.8rem;
+        margin-bottom: 27px;        
+    }
+
+    &__text{
+        position: absolute;
+        bottom: 48px;
+        margin: auto 24px;
+    }
+    &__description{
+        font-size: 1.55rem;
+        line-height: 27px;
+    }
+}
+
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 76px;
+
+    &__title{
+        font-family: $font-f02;
+        font-weight: 900; 
+        font-size: 1.6rem;
+        color: $Grayish-blue;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+
+        margin: 64px 0 8px;
+    }
+
+    &__article{
+        margin-top: 56px;
+    }
+    &__img{
+        border-radius: 50%;
+        width: 72px;
+        margin: 0 auto;
+    }
+    &__text{
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 32px;
+        color: $Dark-blue;
+        margin: 32px 24px;
+    }
+    &__name{
+        font-family: $font-f02;
+        font-weight: 900;
+        margin-bottom: 4px;
+    }
+
+    &__profession{
+        font-size: 1.4rem;
+        color: $Grayish-blue;
+        margin-top: 12px;
+    }
+}
+
+.ilustrations{
+    display: flex;
+    flex-direction: column;    
+
+    &__container{
+        display: flex;
+        height: 188px;        
+    }
+
+    &__img{        
+        height: 100%;
+    }
+}
+.footer{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 352px;
+    background-color: #7fd6c3;
+    color: $Dark-moderate-cyan;
+    padding: 36px 0 50px;
+}
+.footer__logo{
+    margin: 0 auto;
+    width: 54%;
+    padding: 0 20px 12px;
+}
+.footer__menu{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60px;
+    padding: 0 12px 60px;
+}
+.social-media{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
