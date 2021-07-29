@@ -14,99 +14,99 @@ html(lang="es")
         link(rel="stylesheet", href="./css/styles.css")
         link(rel="shortcut icon", href="./images/iconos/favicon-32x32.png", type="image/x-icon")
         title Frontend Mentor | Sunnyside agency landing page
-    body        
-        header.header 
-            img(src="./images/logo/logo.svg", alt="logo").header__logo 
+    body    
+        .container         
+            header.header 
+                img(src="./images/logo/logo.svg", alt="logo").header__logo 
 
-            h1.header__title We are creatives
-                span.header__arrow
-            button(type="button").btn-menu#btn-menu
-                span.btn-menu__bar 
-                nav 
-                    ul.header__menu  
-                        each navMenu in navMenus                        
+                h1.header__title We are creatives
+                //- span.header__arrow
+                
+                button(type="button").btn-menu#btn-menu
+                    span.btn-menu__bar 
+                    nav 
+                        ul.menu  
+                            each navMenu in navMenus                         
+                                li
+                                    a(href="#").menu__link= `${navMenu}`
                             li
-                                a(href="#").header__menu-link= `${navMenu}`
-                        li
-                            a(href="#").header__menu-link--contact Contact             
-        main.main 
-            section.issue 
-                picture 
-                    source(srcset="./images/mobile/image-transform.jpg" media="min-width: 1024px")
-                    img(src="./images/desktop/image-transform.jpg", alt="", srcset="") 
-                article.issue__container 
-                    h2.issue__title Transform your brand
-                    p.issue__description We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
-                    a(href="#").issue__link--yellow Learn more
-            section.issue 
-                picture 
-                    source(srcset="./images/mobile/image-stand-out.jpg" media="min-width: 1024px")
-                    img(src="./images/desktop/image-stand-out.jpg", alt="", srcset="") 
-                article.issue__container
-                    h2.issue__title Stand out to the right audience
-                    p.issue__description Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
-                    a(href="#").issue__link--red Learn more
-            section.services 
-                article.services__graphic-design
-                    .services__text  
-                        h2.services__title Graphic design
-                        p.services__description Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-                article.services__photography                    
-                    .services__text
-                        h2.services__title Photography
-                        p.services__description Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-            section.testimonials 
-                h2.testimonials__title Client testimonials
-                article.testimonials__article 
-                    img(src="./images/people/emily.jpg", alt="foto de Emily").testimonials__img
-                    blockquote.testimonials__text We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-                    p.testimonials__name Emily R.
-                    p.testimonials__profession Marketing Director
-                article.testimonials__article 
-                    img(src="./images/people/thomas.jpg", alt="foto de Thomas").testimonials__img
-                    blockquote.testimonials__text Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-                    p.testimonials__name Thomas S.
-                    p.testimonials__profession Chief Operating Officer
-                article.testimonials__article
-                    img(src="./images/people/jennie.jpg", alt="foto de Jennie").testimonials__img
-                    blockquote.testimonials__text Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-                    p.testimonials__name Jennie F.
-                    p.testimonials__profession Business Owner
-            section.ilustrations 
-                .ilustrations__container 
-                    picture 
-                        source(srcset="./images/desktop/image-gallery-milkbottles.jpg" media="min-width: 1024px")
-                        img(src="./images/mobile/image-gallery-milkbottles.jpg", alt="", srcset="").ilustrations__img
-                    picture 
-                        source(srcset="./images/desktop/image-gallery-orange.jpg" media="min-width: 1024px")
-                        img(src="./images/mobile/image-gallery-orange.jpg", alt="", srcset="").ilustrations__img
-                .ilustrations__container 
-                    picture 
-                        source(srcset="./images/desktop/image-gallery-cone.jpg" media="min-width: 1024px").ilustrations__picture 
-                        img(src="./images/mobile/image-gallery-cone.jpg", alt="", srcset="").ilustrations__img
-                    picture 
-                        source(srcset="./images/desktop/image-gallery-sugar-cubes.jpg" media="min-width: 1024px")
-                        img(src="./images/mobile/image-gallery-sugar-cubes.jpg", alt="", srcset="").ilustrations__img
-        footer.footer 
-            img(src="./images/logo/logo-footer.svg", alt="logo").footer__logo
-            nav 
-                    ul.footer__menu  
-                        each navMenu in navMenus                        
-                            li
-                                a(href="#").footer__menu-link= `${navMenu}`
-            article
-                ul.social-media 
-                    li
-                        a(href="#")
-                            img(src="./images/iconos/facebook.svg", alt="facebook")
-                    li
-                        a(href="#")
-                            img(src="./images/iconos/instagram.svg", alt="instagram")
-                    li
-                        a(href="#")
-                            img(src="./images/iconos/twitter.svg", alt="twitter")
-                    li
-                        a(href="#")
-                            img(src="./images/iconos/pinterest.svg", alt="pinterest")                        
+                                a(href="#").menu__link--contact Contact
+            main.main 
+                section.issue.issue--reverse
+                    .issue__conteainer
+                        picture 
+                            source(srcset="./images/mobile/image-transform.jpg" media="(min-width: 1024px)")
+                            img(src="./images/desktop/image-transform.jpg", alt="",srcset="").issue__img 
+                    .issue__container        
+                        article.issue__text 
+                            h2.issue__title Transform your brand
+                            p.issue__description We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+                            a(href="#").issue__link--yellow Learn more
+                section.issue
+                    .issue__conteainer
+                        picture 
+                            source(srcset="./images/mobile/image-stand-out.jpg" media="(min-width: 1024px)")
+                            img(src="./images/desktop/image-stand-out.jpg", alt="", srcset="").issue__img 
+                    .issue__container
+                        article.issue__text
+                            h2.issue__title Stand out to the right audience
+                            p.issue__description Using a collaborative formula of designers, researchers, photographers, videographers, and pywriters, we’ll build and extend your brand in digital places.
+                            a(href="#").issue__link--red Learn more
+                section.services 
+                    article.services__graphic-design
+                        .services__text  
+                            h2.services__title Graphic design
+                            p.services__description Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+                    article.services__photography                    
+                        .services__text
+                            h2.services__title Photography
+                            p.services__description Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+                section.testimonials 
+                    h2.testimonials__title Client testimonials
+                    .testimonials__container 
+                        article.testimonials__article 
+                            img(src="./images/people/emily.jpg", alt="foto de Emily").testimonials__img
+                            blockquote.testimonials__text We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+                            p.testimonials__name Emily R.
+                            p.testimonials__profession Marketing Director
+                        article.testimonials__article 
+                            img(src="./images/people/thomas.jpg", alt="foto de  Thomas").testimonials__img
+                            blockquote.testimonials__text Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+                            p.testimonials__name Thomas S.
+                            p.testimonials__profession Chief Operating Officer
+                        article.testimonials__article
+                            img(src="./images/people/jennie.jpg", alt="foto de Jennie").testimonials__img
+                            blockquote.testimonials__text Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+                            p.testimonials__name Jennie F.
+                            p.testimonials__profession Business Owner                            
+                section.ilustrations 
+                    .ilustrations__container 
+                        picture 
+                            source(srcset="./images/desktop/image-gallery-milkbottles.jpg" media="(max-width: 1024px)")
+                            img(src="./images/mobile/image-gallery-milkbottles.jpg",alt="",srcset="").ilustrations__img
+                        picture 
+                            source(srcset="./images/desktop/image-gallery-orange.jpg" media="(min-width: 1024px)")
+                            img(src="./images/mobile/image-gallery-orange.jpg",alt="",srcset="").ilustrations__img
+                    .ilustrations__container 
+                        picture 
+                            source(srcset="./images/desktop/image-gallery-cone.jpg" media="(min-width: 1024px)").ilustrations__picture 
+                            img(src="./images/mobile/image-gallery-cone.jpg", alt="",srcset="").ilustrations__img
+                        picture 
+                            source(srcset="./images/desktop/image-gallery-sugar-cubes.jpg" media="(min-width: 1024px)")
+                            img(src="./images/mobile/image-gallery-sugar-cubes.jpg",alt="", srcset="").ilustrations__img
+            footer.footer
+                .footer__container  
+                    img(src="./images/logo/logo-footer.svg", alt="logo").footer__logo
+                    nav 
+                        ul.footer__menu  
+                            each navMenu in navMenus                        
+                                li
+                                    a(href="#").footer__menu-link= `${navMenu}`
+                    article
+                        ul.social-media                             
+                            each link, key in socialMedia                        
+                                li
+                                    a(href="#")
+                                        img(src=`${link}`, alt=`${key}`)                        
 
         script(src="./js/scripts.js") 
