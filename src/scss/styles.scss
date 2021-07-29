@@ -17,7 +17,9 @@ html{
     border: 0;
 }
 body{
-    max-width: 375px;
+    display: flex;
+    align-items: center;
+
     margin: 0; 
 
     font-family: $fontBarlow;
@@ -25,10 +27,9 @@ body{
     overflow-x: hidden;            
 }
 img{
+    display: block;    
     max-width: 100%;
     height: auto;
-    display: block;
-      
 }
 a{
     text-decoration: none;
