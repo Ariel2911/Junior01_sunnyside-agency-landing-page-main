@@ -1,7 +1,8 @@
-console.log("hola")
 const btnMenu=document.getElementById('btn-menu');
+const menu= document.querySelector('.menu');
 
+//Despliega el menú
 btnMenu.addEventListener('click', () =>{    
     btnMenu.firstChild.classList.toggle('btn-menu__bar--active')
-    btnMenu.childNodes[2].firstElementChild.classList.toggle('header__menu--active')
+    menu.classList.toggle('menu--active')
 })

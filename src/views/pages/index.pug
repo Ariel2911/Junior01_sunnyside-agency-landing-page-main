@@ -20,17 +20,16 @@ html(lang="es")
                 img(src="./images/logo/logo.svg", alt="logo").header__logo 
 
                 h1.header__title We are creatives
-                //- span.header__arrow
                 
                 button(type="button").btn-menu#btn-menu
                     span.btn-menu__bar 
-                    nav 
-                        ul.menu  
-                            each navMenu in navMenus                         
-                                li
-                                    a(href="#").menu__link= `${navMenu}`
+                nav 
+                    ul.menu  
+                        each navMenu in navMenus                         
                             li
-                                a(href="#").menu__link--contact Contact
+                                a(href="#").menu__link= `${navMenu}`
+                        li
+                            a(href="#").menu__link--contact Contact
             main.main 
                 section.issue.issue--reverse
                     .issue__conteainer

@@ -1,8 +1,6 @@
 @import './config';
-@import './arrow';
 @import './btn-menu';
 @import './mixin';
-
 
 
 html{
@@ -14,23 +12,17 @@ html{
 *:before,
 *:after{
     box-sizing: inherit;
-    border: 0;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{ 
+    margin: 0;
 
-    margin: 0; 
-
-    font-family: $fontBarlow;
-
-    overflow-x: hidden;            
+    font-family: $fontBarlow;                
 }
 img{
-    display: block;    
+    display: block;
+
     max-width: 100%;
-    height: auto;
+    height: auto;    
 }
 a{
     text-decoration: none;
@@ -38,111 +30,129 @@ a{
 }
 ul{
     padding:0;
-    margin: 0;    
+    margin: 0; 
+
     list-style: none;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;  
 }
 
 .header{
     position: relative;
+
     height: 536px;
 
     background-image: url("../images/iconos/arrow-down.svg"), url("../images/mobile/image-header.jpg");
     background-size: 35px, cover;
     background-repeat: no-repeat, no-repeat; 
     background-position: center 290px, center bottom;
-     
-    &__menu{
-        position: absolute;
-        z-index: 99;
-        top: 75px;
-        left: -305px;
-        right: 0px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 305px;
-
-        padding: 0px 0 18px;        
-
-        background-color: $white;
-
-        opacity: 0;
-
-        transition: opacity 0.5s ease;
-
-        &-link{            
-            font-size: 2rem;            
-            color: $darkBlue;
-
-            &--contact{                
-                padding: 19px 26px 18px;
-                border-radius: 50px;
-
-                @include font-f-w-s-c($fontFraunces, 700, 1.55rem, $darkDesBlue);
-                
-                text-transform: uppercase;
     
-                background-color: $yellow;
-            }
-        }
-        
-
-        &::before{
-            content: '';
-            position: absolute;
-            top: -24px;
-            right: 0;
-            width: 24px;
-            height: 24px;
-            border-left: 12px solid transparent;
-            border-right: 12px solid $white;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid $white;
-        } 
-        
-        &--active{
-            opacity: 1;
-        }
-    }
-
     &__logo{
         display: inline-block;
+
         margin-top: 32px;
-        margin-left: 12px;
+        margin-left: 24px;      
     }
-    
     &__title{
-        margin-top: 84px; 
+        position: relative;
+        top: 58px;       
         
         @include font-f-w-s-c($fontFraunces, 900, 4rem, $white);
-        
-        text-transform: uppercase;
-        text-align: center;        
+
+        text-align: center;
+        text-transform: uppercase;        
         letter-spacing: 6.5px;
     }
 }
+
+.menu{
+    position: absolute;
+    z-index: -9;
+    // top: 75px;
+    // left: -305px;
+    // right: 0;
+    top: 100px;
+    right: 24px;
+    width: 359px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 305px;
+    padding-bottom:18px;        
+
+    background-color: $white;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &__link{            
+        font-size: 2rem;        
+        color: $darkBlue;
+
+        &--contact{
+            padding: 19px 26px 18px;
+            border-radius: 50px;
+
+            @include font-f-w-s-c($fontFraunces, 700, 1.55rem, $darkDesBlue);
+
+            text-transform: uppercase;
+
+            background-color: $yellow;
+        }
+    }
+    &::before{        
+        position: absolute;
+        top: -24px;
+        right: 0;
+
+        width: 24px;
+        height: 24px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid $white;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid $white;
+
+        content: '';
+    }     
+    &--active{
+        z-index: 0;
+        opacity: 1;  
+             
+    }
+}
+ 
 .main{
     text-align: center;
 }
+
 .issue{
     display: flex;
-    flex-direction: column;    
-
-    &__container{
-        margin: 38px 24px 67px;
+    flex-direction: column;   
+    
+    &__img{
+        margin: 0 auto;
     }
-
-    &__title{
-        margin-bottom: 24px; 
-
-        @include font-f-w-s-c($fontFraunces, 900, 3.15rem);
+    &__text{
+        margin: 38px 24px 67px; 
     }
-    &__description{
-        margin-bottom: 32px;
+    &__title{         
+        margin-bottom: 24px;
+
+        @include font-f-w-s-c($fontFraunces, 900, 3.15rem);               
+    }
+    &__description{        
+        margin-bottom: 32px; 
+
+        font-size: 1.8rem;
         color: $darkBlue; 
-        line-height: 3rem;         
+        
+        line-height: 3rem;
     }
     &__link--yellow, &__link--red{
         position: relative;
@@ -152,52 +162,57 @@ ul{
         letter-spacing: 1.3px;
         text-transform: uppercase;
 
-        &:after{
-            content: '';
+        &:after{  
             display: block;
+
             position: absolute;
             z-index: -9;
             bottom: -1px;
             left: -2px;
+
             width: 126px;
             height: 8px;
             border-radius: 4px;
-            background-color: $yellow;
+
+            content: '';            
+            background-color: lighten($yellow, 35);
         }
     }
     &__link--red:after{
-        background-color: $softRed;
+        background-color: lighten($softRed, 25);
     }
 }
 
 .services{
     display: flex;
     flex-direction: column;
+
     color: $darkDesBlue;
 
     &__graphic-design, &__photography{
-        position: relative;
-
+        position: relative;        
+                
         height: 596px; 
-
-        background-image: url("../images/mobile/image-graphic-design.jpg");
+        
         background-size: cover;
-               
     }
-
+    &__graphic-design{
+        background-image: url("../images/mobile/image-graphic-design.jpg");
+    }
     &__photography{
         background-image: url("../images/mobile/image-photography.jpg");
-    }
-
-    &__title{
-        margin-bottom: 27px;
-
-        @include font-f-w-s-c($fontFraunces, 900, 1.8rem);
     }
     &__text{
         position: absolute;
         bottom: 48px;
-        margin: auto 24px;
+
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    &__title{
+        margin-bottom: 27px;
+
+        @include font-f-w-s-c($fontFraunces, 900, 2.8rem);
     }
     &__description{
         font-size: 1.55rem;
@@ -205,60 +220,64 @@ ul{
     }
 }
 
-.testimonials{
-    display: flex;
-    flex-direction: column;
+.testimonials{    
     margin-bottom: 76px;
 
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
     &__title{
         margin: 64px 0 8px;
 
-        @include font-f-w-s-c($fontFraunces, 900, 1.6rem, $grayishBlue);
+        @include font-f-w-s-c($fontFraunces, 900, 1.6rem,$grayishBlue);
         
         letter-spacing: 5px;
         text-transform: uppercase;
-    }
+    }    
     &__article{
         margin-top: 56px;
     }
     &__img{
-        border-radius: 50%;
-        width: 72px;
+        width: 72px;               
         margin: 0 auto;
+        border-radius: 50%;         
     }
     &__text{
         margin: 32px 24px;
 
         @include font-f-w-s-c(inherit, 600, 1.8rem, $darkBlue);
-        
-        line-height: 32px;
+
+        line-height: 32px;        
     }
     &__name{
         margin-bottom: 4px;
 
         @include font-f-w-s-c($fontFraunces, 900, 1.8rem);
     }
-
     &__profession{
         margin-top: 12px;
 
-        @include font-f-w-s-c(inherit, 600, 1.4rem, $grayishBlue);
+        font-size: 1.4rem;
+        color: $grayishBlue;        
     }
 }
 
 .ilustrations{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;  
 
     &__container{
         display: flex;
+
         height: 188px;        
     }
-
-    &__img{        
-        height: 100%;
+    &__img{  
+        width: 100%;      
+        height: 100%;        
     }
 }
+
 .footer{
     display: flex; 
     flex-direction: column;
@@ -267,25 +286,29 @@ ul{
     height: 352px;
     padding: 36px 0 50px;
 
-    color: $darkMidCyan;
+    background-color: #7fd6c3;    
 
-    background-color: #7fd6c3;
+    &__logo{        
+        width: 212px;
+        margin: 0 auto;
+        padding: 0 20px 12px;
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-around;
+
+        padding: 0 12px 60px;
+    }
 }
 
-.footer__logo{
-    margin: 0 auto;
-    width: 54%;
-    padding: 0 20px 12px;
-}
-.footer__menu{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 60px;
-    padding: 0 12px 60px;
-}
 .social-media{
     display: flex;
-    width: 60%;
     justify-content: space-evenly;
+    
+    width: 60%;    
     margin: 0 auto;
+}
+
+picture{
+    width: 100%;
 }
