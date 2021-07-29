@@ -136,14 +136,14 @@ ul {
   color: #818498;
 }
 .header__menu-link--contact {
-  font-family: "Fraunces", serif;
-  font-size: 1.55rem;
-  font-size: 700;
-  text-transform: uppercase;
-  color: #23303e;
-  background-color: #fad400;
-  border-radius: 50px;
   padding: 19px 26px 18px;
+  border-radius: 50px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.55rem;
+  color: #23303e;
+  text-transform: uppercase;
+  background-color: #fad400;
 }
 .header__menu::before {
   content: "";
@@ -170,10 +170,10 @@ ul {
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 4rem;
+  color: white;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 6.5px;
-  color: white;
 }
 
 .main {
@@ -188,21 +188,23 @@ ul {
   margin: 38px 24px 67px;
 }
 .issue__title {
+  margin-bottom: 24px;
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 3.15rem;
-  margin-bottom: 24px;
+  color: inherit;
 }
 .issue__description {
-  line-height: 3rem;
   margin-bottom: 32px;
   color: #818498;
+  line-height: 3rem;
 }
 .issue__link--yellow, .issue__link--red {
   position: relative;
   font-family: "Fraunces", serif;
-  font-size: 1.5rem;
   font-weight: 900;
+  font-size: 1.5rem;
+  color: inherit;
   letter-spacing: 1.3px;
   text-transform: uppercase;
 }
@@ -229,18 +231,19 @@ ul {
 }
 .services__graphic-design, .services__photography {
   position: relative;
+  height: 596px;
   background-image: url("../images/mobile/image-graphic-design.jpg");
   background-size: cover;
-  height: 596px;
 }
 .services__photography {
   background-image: url("../images/mobile/image-photography.jpg");
 }
 .services__title {
+  margin-bottom: 27px;
   font-family: "Fraunces", serif;
   font-weight: 900;
-  font-size: 2.8rem;
-  margin-bottom: 27px;
+  font-size: 1.8rem;
+  color: inherit;
 }
 .services__text {
   position: absolute;
@@ -258,13 +261,13 @@ ul {
   margin-bottom: 76px;
 }
 .testimonials__title {
+  margin: 64px 0 8px;
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 1.6rem;
   color: #a7abae;
   letter-spacing: 5px;
   text-transform: uppercase;
-  margin: 64px 0 8px;
 }
 .testimonials__article {
   margin-top: 56px;
@@ -275,21 +278,26 @@ ul {
   margin: 0 auto;
 }
 .testimonials__text {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 32px;
-  color: #818498;
   margin: 32px 24px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #818498;
+  line-height: 32px;
 }
 .testimonials__name {
+  margin-bottom: 4px;
   font-family: "Fraunces", serif;
   font-weight: 900;
-  margin-bottom: 4px;
+  font-size: 1.8rem;
+  color: inherit;
 }
 .testimonials__profession {
+  margin-top: 12px;
+  font-family: inherit;
+  font-weight: 600;
   font-size: 1.4rem;
   color: #a7abae;
-  margin-top: 12px;
 }
 
 .ilustrations {
@@ -309,9 +317,9 @@ ul {
   flex-direction: column;
   justify-content: space-evenly;
   height: 352px;
-  background-color: #7fd6c3;
-  color: #458c7e;
   padding: 36px 0 50px;
+  color: #458c7e;
+  background-color: #7fd6c3;
 }
 
 .footer__logo {

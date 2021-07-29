@@ -1,0 +1,6 @@
+@mixin font-f-w-s-c($family, $weight, $size, $color: inherit) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}

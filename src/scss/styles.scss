@@ -1,7 +1,7 @@
 @import './config';
 @import './arrow';
 @import './btn-menu';
-
+@import './mixin';
 
 
 
@@ -70,21 +70,18 @@ ul{
         transition: opacity 0.5s ease;
 
         &-link{            
-            font-size: 2rem;
-            
+            font-size: 2rem;            
             color: $darkBlue;
 
-            &--contact{
-                font-family: $fontFraunces;
-                font-size: 1.55rem;            
-                font-size: 700;
+            &--contact{                
+                padding: 19px 26px 18px;
+                border-radius: 50px;
+
+                @include font-f-w-s-c($fontFraunces, 700, 1.55rem, $darkDesBlue);
+                
                 text-transform: uppercase;
-                color: $darkDesBlue;
     
                 background-color: $yellow;
-    
-                border-radius: 50px;
-                padding: 19px 26px 18px;
             }
         }
         
@@ -114,21 +111,17 @@ ul{
     }
     
     &__title{
-        margin-top: 84px;        
+        margin-top: 84px; 
         
-        font-family: $fontFraunces;
-        font-weight: 900;
-        font-size: 4rem;
+        @include font-f-w-s-c($fontFraunces, 900, 4rem, $white);
+        
         text-transform: uppercase;
         text-align: center;        
         letter-spacing: 6.5px;
-        color: $white;
     }
 }
 .main{
     text-align: center;
-        
-    
 }
 .issue{
     display: flex;
@@ -139,23 +132,20 @@ ul{
     }
 
     &__title{
-        font-family: $fontFraunces;
-        font-weight: 900; 
-        font-size: 3.15rem;
-        margin-bottom: 24px;        
-    }
+        margin-bottom: 24px; 
 
+        @include font-f-w-s-c($fontFraunces, 900, 3.15rem);
+    }
     &__description{
-        line-height: 3rem;
-        margin-bottom: 32px; 
-        color: $darkBlue;          
+        margin-bottom: 32px;
+        color: $darkBlue; 
+        line-height: 3rem;         
     }
-
     &__link--yellow, &__link--red{
         position: relative;
-        font-family: $fontFraunces;
-        font-size: 1.5rem;
-        font-weight: 900;
+
+        @include font-f-w-s-c($fontFraunces, 900, 1.5rem);
+        
         letter-spacing: 1.3px;
         text-transform: uppercase;
 
@@ -172,7 +162,6 @@ ul{
             background-color: $yellow;
         }
     }
-
     &__link--red:after{
         background-color: $softRed;
     }
@@ -185,9 +174,12 @@ ul{
 
     &__graphic-design, &__photography{
         position: relative;
+
+        height: 596px; 
+
         background-image: url("../images/mobile/image-graphic-design.jpg");
         background-size: cover;
-        height: 596px;        
+               
     }
 
     &__photography{
@@ -195,12 +187,10 @@ ul{
     }
 
     &__title{
-        font-family: $fontFraunces;
-        font-weight: 900; 
-        font-size: 2.8rem;
-        margin-bottom: 27px;        
-    }
+        margin-bottom: 27px;
 
+        @include font-f-w-s-c($fontFraunces, 900, 1.8rem);
+    }
     &__text{
         position: absolute;
         bottom: 48px;
@@ -218,16 +208,13 @@ ul{
     margin-bottom: 76px;
 
     &__title{
-        font-family: $fontFraunces;
-        font-weight: 900; 
-        font-size: 1.6rem;
-        color: $grayishBlue;
+        margin: 64px 0 8px;
+
+        @include font-f-w-s-c($fontFraunces, 900, 1.6rem, $grayishBlue);
+        
         letter-spacing: 5px;
         text-transform: uppercase;
-
-        margin: 64px 0 8px;
     }
-
     &__article{
         margin-top: 56px;
     }
@@ -237,22 +224,22 @@ ul{
         margin: 0 auto;
     }
     &__text{
-        font-size: 1.8rem;
-        font-weight: 600;
-        line-height: 32px;
-        color: $darkBlue;
         margin: 32px 24px;
+
+        @include font-f-w-s-c(inherit, 600, 1.8rem, $darkBlue);
+        
+        line-height: 32px;
     }
     &__name{
-        font-family: $fontFraunces;
-        font-weight: 900;
         margin-bottom: 4px;
+
+        @include font-f-w-s-c($fontFraunces, 900, 1.8rem);
     }
 
     &__profession{
-        font-size: 1.4rem;
-        color: $grayishBlue;
         margin-top: 12px;
+
+        @include font-f-w-s-c(inherit, 600, 1.4rem, $grayishBlue);
     }
 }
 
@@ -273,11 +260,15 @@ ul{
     display: flex; 
     flex-direction: column;
     justify-content: space-evenly;
+
     height: 352px;
-    background-color: #7fd6c3;
-    color: $darkMidCyan;
     padding: 36px 0 50px;
+
+    color: $darkMidCyan;
+
+    background-color: #7fd6c3;
 }
+
 .footer__logo{
     margin: 0 auto;
     width: 54%;
