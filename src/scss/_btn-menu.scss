@@ -1,14 +1,13 @@
 .btn-menu{
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     top: 30px;
     right: 24px;
 
-    padding: 0;
-    border: 0;
-
     width: 24px;
     height: 30px;
+    padding: 0;
+    border: 0;
 
     background:none;
     
@@ -22,7 +21,7 @@
         height: 2px;
         border-radius: 1px;
 
-        background-color: $White;        
+        background-color: $white;        
 
         &:before, &:after{
             position: absolute;
@@ -36,17 +35,13 @@
             height: 2px; 
             border-radius: 1px;
             
-            background-color: $White;
+            background-color: $white;
 
             transition: transform 0.2s ease;
         }
-
-        
-
         &:after{
             top: -7px;
         }
-
         &--active{
             height: 0;
 
@@ -57,7 +52,6 @@
             &:after{
                 transform: rotate(45deg);
             }
-        }
-            
+        }            
     }
 }

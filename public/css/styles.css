@@ -28,13 +28,13 @@
 
 .btn-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   top: 30px;
   right: 24px;
-  padding: 0;
-  border: 0;
   width: 24px;
   height: 30px;
+  padding: 0;
+  border: 0;
   background: none;
   cursor: pointer;
 }
@@ -86,9 +86,8 @@ html {
 
 body {
   max-width: 375px;
-  font-family: "Barlow", sans-serif;
-  font-size: 1.8rem;
   margin: 0;
+  font-family: "Barlow", sans-serif;
   overflow-x: hidden;
 }
 

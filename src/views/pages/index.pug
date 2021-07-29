@@ -24,9 +24,9 @@ html(lang="es")
                 span.btn-menu__bar 
                 nav 
                     ul.header__menu  
-                        each navBar in navBars                        
+                        each navMenu in navMenus                        
                             li
-                                a(href="#").header__menu-link= `${navBar}`
+                                a(href="#").header__menu-link= `${navMenu}`
                         li
                             a(href="#").header__menu-link--contact Contact             
         main.main 
@@ -91,9 +91,9 @@ html(lang="es")
             img(src="./images/logo/logo-footer.svg", alt="logo").footer__logo
             nav 
                     ul.footer__menu  
-                        each navBar in navBars                        
+                        each navMenu in navMenus                        
                             li
-                                a(href="#").footer__menu-link= `${navBar}`
+                                a(href="#").footer__menu-link= `${navMenu}`
             article
                 ul.social-media 
                     li

@@ -18,11 +18,9 @@ html{
 }
 body{
     max-width: 375px;
-
-    font-family: $font-f01;
-    font-size: $font-s;
-
     margin: 0; 
+
+    font-family: $fontBarlow;
 
     overflow-x: hidden;            
 }
@@ -65,7 +63,7 @@ ul{
 
         padding: 0px 0 18px;        
 
-        background-color: $White;
+        background-color: $white;
 
         opacity: 0;
 
@@ -74,16 +72,16 @@ ul{
         &-link{            
             font-size: 2rem;
             
-            color: $Dark-blue;
+            color: $darkBlue;
 
             &--contact{
-                font-family: $font-f02;
+                font-family: $fontFraunces;
                 font-size: 1.55rem;            
                 font-size: 700;
                 text-transform: uppercase;
-                color: $Very-dark-D-blue;
+                color: $darkDesBlue;
     
-                background-color: $Yellow;
+                background-color: $yellow;
     
                 border-radius: 50px;
                 padding: 19px 26px 18px;
@@ -99,9 +97,9 @@ ul{
             width: 24px;
             height: 24px;
             border-left: 12px solid transparent;
-            border-right: 12px solid $White;
+            border-right: 12px solid $white;
             border-top: 12px solid transparent;
-            border-bottom: 12px solid $White;
+            border-bottom: 12px solid $white;
         } 
         
         &--active{
@@ -118,13 +116,13 @@ ul{
     &__title{
         margin-top: 84px;        
         
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-weight: 900;
         font-size: 4rem;
         text-transform: uppercase;
         text-align: center;        
         letter-spacing: 6.5px;
-        color: $White;
+        color: $white;
     }
 }
 .main{
@@ -141,7 +139,7 @@ ul{
     }
 
     &__title{
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-weight: 900; 
         font-size: 3.15rem;
         margin-bottom: 24px;        
@@ -150,12 +148,12 @@ ul{
     &__description{
         line-height: 3rem;
         margin-bottom: 32px; 
-        color: $Dark-blue;          
+        color: $darkBlue;          
     }
 
     &__link--yellow, &__link--red{
         position: relative;
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-size: 1.5rem;
         font-weight: 900;
         letter-spacing: 1.3px;
@@ -171,19 +169,19 @@ ul{
             width: 126px;
             height: 8px;
             border-radius: 4px;
-            background-color: $Yellow;
+            background-color: $yellow;
         }
     }
 
     &__link--red:after{
-        background-color: $Soft-red;
+        background-color: $softRed;
     }
 }
 
 .services{
     display: flex;
     flex-direction: column;
-    color: $Very-dark-D-blue;
+    color: $darkDesBlue;
 
     &__graphic-design, &__photography{
         position: relative;
@@ -197,7 +195,7 @@ ul{
     }
 
     &__title{
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-weight: 900; 
         font-size: 2.8rem;
         margin-bottom: 27px;        
@@ -220,10 +218,10 @@ ul{
     margin-bottom: 76px;
 
     &__title{
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-weight: 900; 
         font-size: 1.6rem;
-        color: $Grayish-blue;
+        color: $grayishBlue;
         letter-spacing: 5px;
         text-transform: uppercase;
 
@@ -242,18 +240,18 @@ ul{
         font-size: 1.8rem;
         font-weight: 600;
         line-height: 32px;
-        color: $Dark-blue;
+        color: $darkBlue;
         margin: 32px 24px;
     }
     &__name{
-        font-family: $font-f02;
+        font-family: $fontFraunces;
         font-weight: 900;
         margin-bottom: 4px;
     }
 
     &__profession{
         font-size: 1.4rem;
-        color: $Grayish-blue;
+        color: $grayishBlue;
         margin-top: 12px;
     }
 }
@@ -277,7 +275,7 @@ ul{
     justify-content: space-evenly;
     height: 352px;
     background-color: #7fd6c3;
-    color: $Dark-moderate-cyan;
+    color: $darkMidCyan;
     padding: 36px 0 50px;
 }
 .footer__logo{
