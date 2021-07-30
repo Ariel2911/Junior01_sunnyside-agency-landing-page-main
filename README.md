@@ -25,6 +25,9 @@ Los usuarios deben poder:
 
 ### Captura de pantalla
 
+![cap01](https://user-images.githubusercontent.com/63480084/127679294-8cda085c-a418-463a-8b5f-bbd08b42b6cc.png)
+
+
 
 
 ### Links
@@ -40,8 +43,6 @@ Los usuarios deben poder:
 - Propiedades personalizadas de CSS
 - SASS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - Gulp
 - Javascript
-
