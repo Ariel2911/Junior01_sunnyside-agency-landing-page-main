@@ -37,7 +37,7 @@ html(lang="es")
                             source(srcset="./images/mobile/image-transform.jpg" media="(min-width: 1024px)")
                             img(src="./images/desktop/image-transform.jpg", alt="",srcset="").issue__img 
                     .issue__container        
-                        article.issue__text 
+                        article.issue__text.issue__text--rigth 
                             h2.issue__title Transform your brand
                             p.issue__description We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
                             a(href="#").issue__link--yellow Learn more
@@ -99,13 +99,13 @@ html(lang="es")
                     nav 
                         ul.footer__menu  
                             each navMenu in navMenus                        
-                                li
+                                li.footer__menu-item
                                     a(href="#").footer__menu-link= `${navMenu}`
-                    article
-                        ul.social-media                             
+                    article.social-media
+                        ul.social-media__menu                             
                             each link, key in socialMedia                        
-                                li
+                                li.social-media__item
                                     a(href="#")
-                                        img(src=`${link}`, alt=`${key}`)                        
+                                        img(src=`${link}`, alt=`${key}`)                       
 
         script(src="./js/scripts.js") 

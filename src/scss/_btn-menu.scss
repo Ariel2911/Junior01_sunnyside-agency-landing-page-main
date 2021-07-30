@@ -9,8 +9,7 @@
     padding: 0;
     border: 0;
 
-    background:none;
-    
+    background:none;    
     cursor: pointer;
 
     &__bar{
@@ -35,9 +34,7 @@
             content: '';            
             background-color: $white;
 
-            transition: transform 0.3s ease;
-            
-
+            transition: transform 0.2s ease;
         }
         &:after{
             top: -8px;
@@ -53,5 +50,10 @@
                 transform: rotate(45deg);
             }
         }            
+    }
+}
+@media screen and (min-width: 1024px){
+    .btn-menu{
+        z-index: -9;
     }
 }
