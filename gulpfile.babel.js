@@ -10,14 +10,14 @@ import pug from 'gulp-pug'
 // import sass from 'gulp-sass'
 var sass = require('gulp-sass')(require('sass'));
 
-const production = false
+const production = true
 
 gulp.task('babel', () => {
   return gulp
     .src('./src/js/*.js')
     .pipe(babel())
     .pipe(terser())
-    .pipe(gulp.dest('./public/js')) 
+    .pipe(gulp.dest('./docs/js')) 
 })
 
 gulp.task('views', () => {
@@ -26,16 +26,16 @@ gulp.task('views', () => {
   .pipe(pug({
     pretty: production ? false : true
   }))
-  .pipe(gulp.dest('./public'))
+  .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('sass', () => {
   return gulp.src('./src/scss/styles.scss')
-  // .pipe(sass({
-  //     outputStyle: 'compressed'
-  // }))
+  .pipe(sass({
+    outputStyle: 'compressed'
+  }))
   .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('./public/css'))
+  .pipe(gulp.dest('./docs/css'))
 })
 
 gulp.task('default', () => {

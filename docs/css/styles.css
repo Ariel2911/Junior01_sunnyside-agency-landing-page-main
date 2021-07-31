@@ -10,14 +10,16 @@
   background: none;
   cursor: pointer;
 }
+
 .btn-menu__bar {
   position: relative;
   display: block;
   width: 100%;
   height: 2px;
   border-radius: 1px;
-  background-color: white;
+  background-color: #fff;
 }
+
 .btn-menu__bar:before, .btn-menu__bar:after {
   position: absolute;
   top: 8px;
@@ -26,19 +28,23 @@
   height: 2px;
   border-radius: 1px;
   content: "";
-  background-color: white;
+  background-color: #fff;
   transition: transform 0.2s ease;
 }
+
 .btn-menu__bar:after {
   top: -8px;
 }
+
 .btn-menu__bar--active {
   height: 0;
 }
+
 .btn-menu__bar--active:before, .btn-menu__bar--active:after {
   top: -4px;
   transform: rotate(-45deg);
 }
+
 .btn-menu__bar--active:after {
   transform: rotate(45deg);
 }
@@ -54,9 +60,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -95,18 +99,20 @@ ul {
   background-repeat: no-repeat, no-repeat;
   background-position: center 290px, center bottom;
 }
+
 .header__logo {
   display: inline-block;
   margin-top: 32px;
   margin-left: 24px;
 }
+
 .header__title {
   position: relative;
   top: 58px;
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 4rem;
-  color: white;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 6.5px;
@@ -120,11 +126,13 @@ ul {
     background-repeat: no-repeat, no-repeat;
     background-position: center 355px, center bottom;
   }
+
   .header__logo {
     width: 175px;
     margin-top: 46px;
     margin-left: 42px;
   }
+
   .header__title {
     top: 76px;
     font-size: 5.5rem;
@@ -143,14 +151,16 @@ ul {
   justify-content: space-evenly;
   height: 305px;
   padding-bottom: 18px;
-  background-color: white;
+  background-color: #fff;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
 .menu__link {
   font-size: 2rem;
   color: #818498;
 }
+
 .menu__link--contact {
   padding: 19px 26px 18px;
   border-radius: 50px;
@@ -161,6 +171,7 @@ ul {
   text-transform: uppercase;
   background-color: #fad400;
 }
+
 .menu::before {
   position: absolute;
   top: -24px;
@@ -168,11 +179,12 @@ ul {
   width: 24px;
   height: 24px;
   border-left: 12px solid transparent;
-  border-right: 12px solid white;
+  border-right: 12px solid #fff;
   border-top: 12px solid transparent;
-  border-bottom: 12px solid white;
+  border-bottom: 12px solid #fff;
   content: "";
 }
+
 .menu--active {
   z-index: 0;
   opacity: 1;
@@ -192,24 +204,28 @@ ul {
     background-color: transparent;
     opacity: 1;
   }
+
   .menu__link {
     font-family: inherit;
     font-weight: 900;
     font-size: 1.8rem;
-    color: white;
+    color: #fff;
     margin: 24px;
   }
+
   .menu__link--contact {
     padding-left: 30px;
     padding-right: 30px;
     margin: 24px;
     border-radius: 60px;
-    background-color: white;
+    background-color: #fff;
   }
+
   .menu__link--contact:hover {
     background-color: #88d6fd;
-    color: white;
+    color: #fff;
   }
+
   .menu::before {
     border-color: transparent;
   }
@@ -222,14 +238,17 @@ ul {
   display: flex;
   flex-direction: column;
 }
+
 .issue__img {
   margin: 0 auto;
 }
+
 .issue__text {
   height: 438px;
   padding: 38px 30px 0;
   font-size: 1.8rem;
 }
+
 .issue__title {
   margin-bottom: 24px;
   font-family: "Fraunces", serif;
@@ -237,12 +256,14 @@ ul {
   font-size: 3.15rem;
   color: inherit;
 }
+
 .issue__description {
   margin-bottom: 32px;
   font-size: 1.8rem;
   color: #818498;
   line-height: 3rem;
 }
+
 .issue__link--yellow, .issue__link--red {
   position: relative;
   font-family: "Fraunces", serif;
@@ -252,6 +273,7 @@ ul {
   letter-spacing: 1.3px;
   text-transform: uppercase;
 }
+
 .issue__link--yellow:after, .issue__link--red:after {
   display: block;
   position: absolute;
@@ -264,6 +286,7 @@ ul {
   content: "";
   background-color: #fff3ad;
 }
+
 .issue__link--red:after {
   background-color: #ffe9e6;
 }
@@ -272,35 +295,44 @@ ul {
   .issue {
     flex-direction: row;
   }
+
   .issue__container {
     width: 52%;
   }
+
   .issue--reverse {
     flex-direction: row-reverse;
   }
+
   .issue__text {
     text-align: left;
     margin-top: 6vw;
     margin-left: 5.2vw;
     margin-right: 9vw;
   }
+
   .issue__text--rigth {
     margin-left: 9vw;
     margin-right: 5.2vw;
   }
+
   .issue__title {
     margin-bottom: 32px;
     font-size: 4rem;
   }
+
   .issue__description {
     margin-bottom: 40px;
   }
+
   .issue__link--yellow, .issue__link--red {
     margin-left: 0.6vw;
   }
+
   .issue__link--yellow:hover::after, .issue__link--red:hover::after {
     background-color: #fad400;
   }
+
   .issue__link--red:hover:after {
     background-color: #fe7867;
   }
@@ -310,23 +342,28 @@ ul {
   flex-direction: column;
   color: #23303e;
 }
+
 .services__graphic-design, .services__photography {
   position: relative;
   height: 596px;
   background-size: cover;
 }
+
 .services__graphic-design {
   background-image: url("../images/mobile/image-graphic-design.jpg");
 }
+
 .services__photography {
   background-image: url("../images/mobile/image-photography.jpg");
 }
+
 .services__text {
   position: absolute;
   bottom: 48px;
   margin-right: 24px;
   margin-left: 24px;
 }
+
 .services__title {
   margin-bottom: 27px;
   font-family: "Fraunces", serif;
@@ -334,6 +371,7 @@ ul {
   font-size: 2.8rem;
   color: inherit;
 }
+
 .services__description {
   font-size: 1.55rem;
   line-height: 27px;
@@ -343,15 +381,19 @@ ul {
   .services {
     flex-direction: row;
   }
+
   .services__graphic-design, .services__photography {
     width: 50vw;
   }
+
   .services__graphic-design {
     background-image: url("../images/desktop/image-graphic-design.jpg");
   }
+
   .services__photography {
     background-image: url("../images/desktop/image-photography.jpg");
   }
+
   .services__text {
     right: 0;
     left: 0;
@@ -362,10 +404,12 @@ ul {
 .testimonials {
   margin-bottom: 76px;
 }
+
 .testimonials__container {
   display: flex;
   flex-direction: column;
 }
+
 .testimonials__title {
   margin: 64px 0 8px;
   font-family: "Fraunces", serif;
@@ -375,14 +419,17 @@ ul {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+
 .testimonials__article {
   margin-top: 56px;
 }
+
 .testimonials__img {
   width: 72px;
   margin: 0 auto;
   border-radius: 50%;
 }
+
 .testimonials__text {
   margin: 32px 24px;
   font-family: inherit;
@@ -391,6 +438,7 @@ ul {
   color: #818498;
   line-height: 32px;
 }
+
 .testimonials__name {
   margin-bottom: 4px;
   font-family: "Fraunces", serif;
@@ -398,6 +446,7 @@ ul {
   font-size: 1.8rem;
   color: inherit;
 }
+
 .testimonials__profession {
   margin-top: 12px;
   font-size: 1.4rem;
@@ -408,19 +457,24 @@ ul {
   .testimonials {
     margin: 162px 150px;
   }
+
   .testimonials__container {
     flex-direction: row;
     margin: 0 auto;
   }
+
   .testimonials__title {
     font-size: 2rem;
   }
+
   .testimonials__img {
     margin-bottom: 58px;
   }
+
   .testimonials__text {
     margin: 32px 16px;
   }
+
   .testimonials__name {
     margin-top: 68px;
   }
@@ -429,10 +483,12 @@ ul {
   display: flex;
   flex-direction: column;
 }
+
 .ilustrations__container {
   display: flex;
   height: 188px;
 }
+
 .ilustrations__img {
   width: 100%;
   height: 100%;
@@ -443,10 +499,12 @@ ul {
     flex-direction: row;
     height: 440px;
   }
+
   .ilustrations__container {
     width: 50%;
     height: auto;
   }
+
   .ilustrations__img {
     object-fit: cover;
   }
@@ -458,16 +516,19 @@ ul {
   color: #458c7e;
   background-color: #7fd6c3;
 }
+
 .footer__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
+
 .footer__logo {
   width: 172px;
   margin: 0 auto;
 }
+
 .footer__menu {
   display: flex;
   justify-content: space-around;
@@ -486,8 +547,9 @@ ul {
     width: 380px;
     margin: 0 auto;
   }
+
   .footer__menu-item:hover {
-    color: white;
+    color: #fff;
   }
 
   .social-media__item:hover {
