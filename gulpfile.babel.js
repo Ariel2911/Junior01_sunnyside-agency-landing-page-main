@@ -7,7 +7,6 @@ import terser from 'gulp-terser'
 import pug from 'gulp-pug'
 
 //SASS
-// import sass from 'gulp-sass'
 var sass = require('gulp-sass')(require('sass'));
 
 const production = true
@@ -31,10 +30,8 @@ gulp.task('views', () => {
 
 gulp.task('sass', () => {
   return gulp.src('./src/scss/styles.scss')
-  .pipe(sass({
-    outputStyle: 'compressed'
-  }))
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  // .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('./docs/css'))
 })
 
@@ -42,5 +39,4 @@ gulp.task('default', () => {
   gulp.watch('./src/views/**/*.pug', gulp.series('views'))
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
   gulp.watch('./src/js/*.js', gulp.series('babel'))
-
 })

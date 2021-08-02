@@ -250,7 +250,7 @@ ul{
         flex-direction: row;
 
         &__container{
-            width: 52%;
+            width: 50%;
         }
         &--reverse{
             flex-direction: row-reverse;
@@ -418,28 +418,16 @@ ul{
     flex-direction: column;  
 
     &__container{
-        display: flex;
-
-        height: 188px;        
+        display: flex;       
     }
-    &__img{  
-        width: 100%;      
-        height: 100%;        
-    }
+    &__img{ 
+        width: 50vw;       
+        object-fit: cover;
+    }    
 }
 @media screen and (min-width: $desktop) {
     .ilustrations{
         flex-direction: row;
-
-        height: 440px;
-
-        &__container{
-            width: 50%;
-            height: auto;
-        }
-        &__img{        
-            object-fit: cover;
-        }
     }
 }
 
