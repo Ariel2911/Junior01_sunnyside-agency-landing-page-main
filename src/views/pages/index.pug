@@ -27,11 +27,11 @@ html(lang="es")
                     ul.menu  
                         each navMenu in navMenus                         
                             li
-                                a(href="#").menu__link= `${navMenu}`
+                                a(href=`#${navMenu}`).menu__link= `${navMenu}`
                         li
-                            a(href="#").menu__link--contact Contact
+                            a(href="#contact").menu__link--contact Contact
             main.main 
-                section.issue.issue--reverse
+                section.issue.issue--reverse#About
                     .issue__conteainer
                         picture 
                             source(srcset="./images/mobile/image-transform.jpg" media="(max-width: 1024px)")
@@ -51,7 +51,7 @@ html(lang="es")
                             h2.issue__title Stand out to the right audience
                             p.issue__description Using a collaborative formula of designers, researchers, photographers, videographers, and pywriters, we’ll build and extend your brand in digital places.
                             a(href="#").issue__link--red Learn more
-                section.services 
+                section.services#Services 
                     article.services__graphic-design
                         .services__text  
                             h2.services__title Graphic design
@@ -78,7 +78,7 @@ html(lang="es")
                             blockquote.testimonials__text Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
                             p.testimonials__name Jennie F.
                             p.testimonials__profession Business Owner                            
-                section.ilustrations 
+                section.ilustrations#Projects 
                     .ilustrations__container 
                         picture 
                             source(srcset="./images/mobile/image-gallery-milkbottles.jpg" media="(max-width: 1024px)")
@@ -93,7 +93,7 @@ html(lang="es")
                         picture 
                             source(srcset="./images/mobile/image-gallery-sugar-cubes.jpg" media="(max-width: 1024px)")
                             img(src="./images/desktop/image-gallery-sugar-cubes.jpg",alt="", srcset="").ilustrations__img
-            footer.footer
+            footer.footer#contact
                 .footer__container  
                     img(src="./images/logo/logo-footer.svg", alt="logo").footer__logo
                     nav 
